@@ -3,20 +3,22 @@
 #include<string.h>
 int main()
 {
-    char s[]="Hello,How are you?";
-    int m=strlen(s)-1,n;
+    char s[]="Hello How are you";
+    int m=strlen(s),n=0,t;
+    printf("%s\n",strrev(s));
     for(int i=0;i<=m;i++)
     {
-        n=s[i];
-        s[i]=s[m];
-        s[m]=n;
-        m--;
+        if(s[i]==' '||i==m)
+        {
+           for(int j=i-1;j>=n;j--)
+           {
+               printf("%c",s[j]);
+           }
+           printf(" ");
+           n=i;
+        }
+    }
 
-    }
-    printf("%s",s);
-    for(int j=0;s[j];j++)
-    {
-        if()
-    }
+
 
 }
